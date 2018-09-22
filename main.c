@@ -6,8 +6,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define DEFAULT_WIDTH   143
-#define DEFAULT_HEIGHT  46
+#define DEFAULT_WIDTH   80
+#define DEFAULT_HEIGHT  25
 
 size_t get_file_size(int fd) {
     size_t size = 0;
@@ -29,7 +29,7 @@ int hash(const int *buffer) {
 }
 
 int usage(const char *filename) {
-    fprintf(stderr, "usage: %s <filepath> [-w <width>] [-h <height>] [-c <character>]\n", filename);
+    fprintf(stderr, "usage: -o <filepath> [-w <width>] [-h <height>] [-c <character>]\n", filename);
     return -1;
 }
 
